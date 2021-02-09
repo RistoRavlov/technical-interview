@@ -20,7 +20,7 @@ We suggest to go over the non-implemted features 30 minutes before the end of th
 - (1) When I click on a great deal I should go to a details page
 - (2) When I go to the details page of a great deal a log event should be sent to the database (credentials to a database are given, you can choose the datamodel for this. We should know the ip of the user, the page (url), 
 - (3) The website should run via a docker image
-- (5) Whenever I check in on the master branch the solution should build
+- (5) Whenever I check in on the main branch the solution should build
 
 
 
