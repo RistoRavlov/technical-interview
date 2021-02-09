@@ -7,6 +7,10 @@ The goal of the excercice is to set up a basic copy of the great deals website (
 The requirements all have priority (1 to 5, 1 being the most important and 5 being trivial). It is up to you to decide what you implement.
 There will a couple of restraints (database technology, asp.net core, graphql) but for the rest you have complete freedom in your choices.
 
+### Development 
+
+Development will be done on your own. If you have any questions contact us via slack
+
 ### Review
 
 At the end of the excercice we will discuss what has been developed and what hasn't been developed. 
@@ -18,14 +22,22 @@ We suggest to go over the non-implemted features 30 minutes before the end of th
 - (1) We need to have an asp.net core website. (If you want to separate the app in frontend and backend you are free to do so.)
 - (1) There should be a homepage that shows all current great deals from the graphql endpoint (only the great deals for zoneid one should be shown)
 - (1) When I click on a great deal I should go to a details page
-- (2) When I go to the details page of a great deal a log event should be sent to the database (credentials to a database are given, you can choose the datamodel for this. We should know the ip of the user, the page (url), 
+- (2)  When I go to the details page of a great deal a log event should be sent to an index in elasticsearch (credentials for elasticsearch are given, you can choose the datamodel for this. We should at least know the ip of the user, the page (url) and the date)
+- (2) When I go to the details page of a great deal a log event should be sent to the database (credentials to a database are given, you can choose the datamodel for this.. We should at least know the ip of the user, the page (url) and the date)
+- (2) There should be a dashboard in kibana to show the amount of events per day.
 - (3) The website should run via a docker image
+- (4) I should be able to switch languages (zoneId) in the website.
 - (5) Whenever I check in on the main branch the solution should build
-
 
 
 ## Technical information
 
+### Elasticsearch
+username: elastic
+password: byAR0NCMeTmgl3JCUK3WtcQz
+
+elasticsearch: https://6604554c0fb04bf99a18a9cfacb3fd86.westeurope.azure.elastic-cloud.com:9243/
+kibana: https://60a65836446142ea97ab024ecfd2e341.westeurope.azure.elastic-cloud.com:9243/app/home#/
 
 ### Sql database:
 Database: bd-myshopi-interview.database.windows.net  
@@ -33,6 +45,10 @@ Admin user: interview
 Password: DWEF*holl9souy_waih   
 
 SQL_Latin1_General_CP1_CI_AS
+
+### application insights
+instrumentation key: d9ad25fa-bdc8-40c7-9410-18c2216e1386
+Connection string: InstrumentationKey=d9ad25fa-bdc8-40c7-9410-18c2216e1386;IngestionEndpoint=https://westeurope-2.in.applicationinsights.azure.com/
 
 ### Data model
 
@@ -56,6 +72,10 @@ agreat deal object has the following properties
 - forAdults: A checkbox to indicate whether this box contains items only adults can buy (i.e. alcohol) (to ignore)
 - bannerText: A text to show in the list to highlight a great deal (see the first great deal on the website (lotus))
 - bannerColor: The background color of the banner
+
+#### ZoneId: 
+this field is used in the graphql query. A zoneId can be compared to a language where 
+1= french (or fr) and 2= duch (or nl)
 
 ### GraphQL endpoint
 
