@@ -3,7 +3,7 @@
 
 ## Introduction
 
-The goal of the excercice is to set up a basic copy of the great deals website (https://greatdeals.myshopi.com/deals).  
+The goal of the exercise is to set up a basic copy of the great deals website (https://greatdeals.myshopi.com/deals).  
 The requirements all have priority (1 to 5, 1 being the most important and 5 being trivial). It is up to you to decide what you implement.  
 There will a couple of restraints (database technology, asp.net core, graphql) but for the rest you have complete freedom in your choices.
 
@@ -13,8 +13,8 @@ Development will be done on your own. If you have any questions contact us via s
 
 ### Review
 
-At the end of the excercice we will discuss what has been developed and what hasn't been developed.  
-We suggest to go over the non-implemted features 30 minutes before the end of the excercice prepare a possible solution.  
+At the end of the exercise we will discuss what has been developed and what hasn't been developed.  
+We suggest to go over the non-implemented features 30 minutes before the end of the exercise. To prepare a plan for a possible solution.  
 
 
 ### Requirements
@@ -26,8 +26,11 @@ We suggest to go over the non-implemted features 30 minutes before the end of th
 - (2) When I go to the details page of a great deal a log event should be sent to the database (credentials to a database are given, you can choose the datamodel for this.. We should at least know the ip of the user, the page (url) and the date)
 - (2) There should be a dashboard in kibana to show the amount of events per day.
 - (3) The website should run via a docker image
+- (3) Items with a banner text and color should be highlighted on the overview page
+- (3) Sold out items should be shown in the end of the list.
+- (4) The technical logging should be sent to application insights.
 - (4) I should be able to switch languages (zoneId) in the website.
-- (5) Whenever I check in on the main branch the solution should build
+- (5) Whenever I check in on the main branch the solution should build in github
 
 
 ## Technical information
