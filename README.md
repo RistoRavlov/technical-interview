@@ -1,4 +1,4 @@
-# technical-interview - Great Deals
+# Technical Interview - Great Deals
 
 
 ## Introduction
