@@ -29,7 +29,7 @@ We suggest to go over the non-implemented features 30 minutes before the end of 
 - (3) Items with a banner text and color should be highlighted on the overview page
 - (3) Sold out items should be shown in the end of the list.
 - (4) The technical logging should be sent to application insights.
-- (4) I should be able to switch languages (zoneId) in the website.
+- (4) I should be able to switch languages based on culture (nl or fr) in the website.
 - (5) Whenever I check in on the main branch the solution should build in github
 
 
